@@ -158,7 +158,7 @@ html[data-theme="light"] {
    4. CURSOR CUSTOMIZADO (apenas desktop com mouse fino)
    ============================================================ */
 
-@media (hover: hover) and (pointer: fine) {
+/*@media (hover: hover) and (pointer: fine) {
     body {
         cursor: none;
     }
@@ -196,7 +196,7 @@ html[data-theme="light"] {
     .custom-cursor {
         display: none;
     }
-}
+}*/
 
 /* ============================================================
    5. SCREENTONE (textura geek de fundo) — CSS PURO
@@ -214,8 +214,13 @@ html[data-theme="light"] {
 }
 
 @keyframes screentone-pan {
-    from { background-position: 0 0; }
-    to   { background-position: 280px 280px; }
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 280px 280px;
+    }
 }
 
 /* ============================================================
@@ -316,10 +321,21 @@ html[data-theme="light"] {
     height: 16px;
 }
 
-html[data-theme="dark"] .icon-sun  { display: block; }
-html[data-theme="dark"] .icon-moon { display: none; }
-html[data-theme="light"] .icon-sun  { display: none; }
-html[data-theme="light"] .icon-moon { display: block; }
+html[data-theme="dark"] .icon-sun {
+    display: block;
+}
+
+html[data-theme="dark"] .icon-moon {
+    display: none;
+}
+
+html[data-theme="light"] .icon-sun {
+    display: none;
+}
+
+html[data-theme="light"] .icon-moon {
+    display: block;
+}
 
 /* Hamburger (mobile) */
 .hamburger {
@@ -343,9 +359,11 @@ html[data-theme="light"] .icon-moon { display: block; }
 .hamburger.is-open span:nth-child(1) {
     transform: translateY(6.5px) rotate(45deg);
 }
+
 .hamburger.is-open span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.is-open span:nth-child(3) {
     transform: translateY(-6.5px) rotate(-45deg);
 }
@@ -477,8 +495,15 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes hero-name-in {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-tagline {
@@ -501,7 +526,9 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 .hero-ctas {
@@ -802,12 +829,29 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes glitch-text {
-    0%   { transform: translate(0); }
-    20%  { transform: translate(-1px, 1px); }
-    40%  { transform: translate(1px, -1px); }
-    60%  { transform: translate(-1px, 0); }
-    80%  { transform: translate(1px, 1px); }
-    100% { transform: translate(0); }
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(1px, -1px);
+    }
+
+    60% {
+        transform: translate(-1px, 0);
+    }
+
+    80% {
+        transform: translate(1px, 1px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
 }
 
 .work-overlay h3 {
@@ -1009,8 +1053,13 @@ html[data-theme="light"] .icon-moon { display: block; }
     height: 16px;
 }
 
-.carousel-prev { left: 0; }
-.carousel-next { right: 0; }
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
 
 .carousel-dots {
     display: flex;
@@ -1111,8 +1160,15 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes faq-open {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================================
@@ -1161,8 +1217,13 @@ html[data-theme="light"] .icon-moon { display: block; }
     background: var(--border-strong);
 }
 
-.contato-divider::before { left: 0; }
-.contato-divider::after  { right: 0; }
+.contato-divider::before {
+    left: 0;
+}
+
+.contato-divider::after {
+    right: 0;
+}
 
 .contato-divider span {
     font-family: var(--font-mono);
@@ -1286,8 +1347,15 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes heart-pulse {
-    0%, 100% { transform: scale(1); }
-    50%      { transform: scale(1.2); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 /* ============================================================
@@ -1330,8 +1398,15 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 /* ============================================================
@@ -1415,7 +1490,7 @@ html[data-theme="light"] .icon-moon { display: block; }
     gap: 8px;
 }
 
-.lightbox-meta span:not(:empty) + span:not(:empty)::before {
+.lightbox-meta span:not(:empty)+span:not(:empty)::before {
     content: " · ";
     margin-right: 4px;
 }
@@ -1479,8 +1554,17 @@ html[data-theme="light"] .icon-moon { display: block; }
     right: 24px;
 }
 
-.lightbox-prev { left: 24px;  top: 50%; transform: translateY(-50%); }
-.lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-prev {
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .lightbox-close svg,
 .lightbox-arrow svg {
@@ -1512,10 +1596,24 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes slash-strike {
-    0%   { left: -120vw; opacity: 0; }
-    15%  { opacity: 1; }
-    50%  { left: 0vw; opacity: 1; }
-    100% { left: 120vw; opacity: 0; }
+    0% {
+        left: -120vw;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        left: 0vw;
+        opacity: 1;
+    }
+
+    100% {
+        left: 120vw;
+        opacity: 0;
+    }
 }
 
 /* ============================================================
@@ -1541,8 +1639,13 @@ html[data-theme="light"] .icon-moon { display: block; }
 }
 
 @keyframes speed-lines-move {
-    from { background-position-x: 0%, 0%, 0%; }
-    to   { background-position-x: -50%, -80%, -30%; }
+    from {
+        background-position-x: 0%, 0%, 0%;
+    }
+
+    to {
+        background-position-x: -50%, -80%, -30%;
+    }
 }
 
 /* ============================================================
@@ -1684,6 +1787,7 @@ html[data-theme="light"] .icon-moon { display: block; }
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
