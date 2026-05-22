@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================================
+         META TAGS & SEO
+         ============================================================ -->
+    <title>Fefeh — Designer & Artista Visual</title>
+    <meta name="description" content="Portfólio de Fernanda Viana (Fefeh): ilustração, animação, 3D e design gráfico com estética monocromática e universo geek.">
+    <meta name="keywords" content="ilustração, design gráfico, animação, 3D, social media, geek, anime, mangá, fanart, taboão da serra">
+    <meta name="author" content="Fernanda Viana (Fefeh)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+    <!-- ============================================================
+         OPEN GRAPH (preview ao compartilhar)
+         ============================================================ -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fefeh — Designer & Artista Visual">
+    <meta property="og:description" content="Ilustração, animação, 3D e design gráfico com estética monocromática e universo geek.">
+    <meta property="og:url" content="INSERIR_URL_FINAL">
+    <meta property="og:image" content="INSERIR_URL_FINAL/assets/og-image.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- ============================================================
+         FAVICON (placeholder SVG — trocar pelo definitivo depois)
+         ============================================================ -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- ============================================================
+         FONTES (Google Fonts)
+         ============================================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         CSS
+         ============================================================ -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- ============================================================
+         SCHEMA.ORG (JSON-LD — semântica para SEO)
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fernanda Viana",
+        "alternateName": "Fefeh",
+        "jobTitle": "Designer e Artista Visual",
+        "url": "INSERIR_URL_FINAL",
+        "sameAs": [
+            "https://instagram.com/fefeh_art_",
+            "INSERIR_BEHANCE",
+            "INSERIR_ARTSTATION",
+            "INSERIR_LINKEDIN"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Taboão da Serra",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "knowsAbout": ["Ilustração", "Animação", "3D", "Design Gráfico", "Social Media"]
+    }
+    </script>
+</head>
+<body>
+
+<!-- ================================================================
+     ELEMENTOS GLOBAIS (cursor, slash easter egg, back-to-top)
+     ================================================================ -->
+<div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+<div class="sword-slash" id="swordSlash" aria-hidden="true"></div>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+
+<!-- ================================================================
+     HEADER & NAVEGAÇÃO
+     ================================================================ -->
+<header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+        <a href="#hero" class="logo" aria-label="Fefeh — início">FEFEH</a>
+
+        <nav class="nav-desktop" aria-label="Navegação principal">
+            <a href="#sobre" class="nav-link">sobre</a>
+            <span class="nav-sep">·</span>
+            <a href="#processo" class="nav-link">processo</a>
+            <span class="nav-sep">·</span>
+            <a href="#portfolio" class="nav-link">portfólio</a>
+            <span class="nav-sep">·</span>
+            <a href="#servicos" class="nav-link">serviços</a>
+            <span class="nav-sep">·</span>
+            <a href="#depoimentos" class="nav-link">depoimentos</a>
+            <span class="nav-sep">·</span>
+            <a href="#faq" class="nav-link">faq</a>
+            <span class="nav-sep">·</span>
+            <a href="#contato" class="nav-link">contato</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Menu mobile overlay -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu-nav" aria-label="Menu mobile">
+        <a href="#sobre" class="mobile-link">sobre</a>
+        <a href="#processo" class="mobile-link">processo</a>
+        <a href="#portfolio" class="mobile-link">portfólio</a>
+        <a href="#servicos" class="mobile-link">serviços</a>
+        <a href="#depoimentos" class="mobile-link">depoimentos</a>
+        <a href="#faq" class="mobile-link">faq</a>
+        <a href="#contato" class="mobile-link">contato</a>
+    </nav>
+</div>
+
+<main>
+
+<!-- ================================================================
+     SEÇÃO 1 — HERO
+     ================================================================ -->
+<section class="hero" id="hero">
+    <div class="screentone-bg" aria-hidden="true"></div>
+    <div class="speed-lines" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+        <h1 class="hero-name">FEFEH</h1>
+
+        <p class="hero-tagline" id="heroTagline" data-text="transformando cultura pop em traço monocromático">
+            <span class="cursor-blink"></span>
+        </p>
+
+        <!--
+            TAGLINES ALTERNATIVAS (descomente uma e comente a de cima
+            para trocar a tagline exibida):
+
+            A) "designer & artista visual — universo geek em preto e branco"
+            B) "ilustração, animação e 3D para o universo geek"
+        -->
+
+        <div class="hero-ctas">
+            <a href="https://wa.me/INSERIR_WHATSAPP?text=Ol%C3%A1%20Fefeh!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+               class="btn btn-primary"
+               target="_blank"
+               rel="noopener">
+                SOLICITE UM ORÇAMENTO
+            </a>
+            <a href="#portfolio" class="btn btn-ghost">ver portfólio ↓</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 2 — SOBRE
+     ================================================================ -->
+<section class="sobre" id="sobre">
+    <div class="container sobre-inner">
+
+        <div class="sobre-visual reveal">
+            <!-- INSERIR_AVATAR: trocar src pelo caminho do avatar/foto da Fefeh -->
+            <img src="assets/img/hero/avatar.png" alt="Avatar de Fernanda Viana (Fefeh)" class="sobre-avatar" onerror="this.style.display='none'">
+
+            <div class="sobre-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">anos<br>de prática</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">trabalhos<br>entregues</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">músicas<br>ouvidas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sobre-text reveal">
+            <span class="section-label">// sobre</span>
+            <h2 class="section-title">QUEM É <br>A FEFEH</h2>
+
+            <!-- TEXTO B (em uso) -->
+            <p>Sou a <strong>Fefeh</strong> — designer e artista visual de Taboão da Serra (SP), formada em design gráfico.</p>
+            <p>Meu trabalho transita entre <strong>pintura, ilustração, animação e 3D</strong>, com foco em traduzir a cultura pop — animes, mangás e games — em estéticas monocromáticas.</p>
+            <p>No meu processo, misturo o físico e o digital, sempre com uma boa trilha sonora rolando ao fundo. O resultado: trabalhos que conversam com o universo geek de quem cresceu nele.</p>
+
+            <!--
+                TEXTO A — bio original (descomente e comente o texto B acima para trocar):
+
+                <p>Fernanda Viana (Fefeh) é designer e artista visual formada em design gráfico, natural de Taboão da Serra - SP. Seu trabalho transita entre pintura, ilustração, animação e 3D, com foco em desenvolver estéticas da cultura pop como por exemplo, animes, mangás e games.</p>
+                <p>Sempre prezando uma estética de desenho marcada pelo monocromático, seu processo criativo envolve diversos materiais tanto físicos como tecnológicos acompanhados de uma produção com uma boa música de fundo, resultando em trabalhos que dialogam com o universo geek.</p>
+            -->
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 3 — PROCESSO CRIATIVO
+     ================================================================ -->
+<section class="processo" id="processo">
+    <div class="container processo-inner">
+
+        <div class="reveal">
+            <span class="section-label">// processo</span>
+            <h2 class="section-title processo-title">DO ESBOÇO À FINALIZAÇÃO</h2>
+        </div>
+
+        <!-- Trilha visual SVG monocromática -->
+        <div class="processo-trilha reveal" aria-label="Etapas do processo criativo">
+            <div class="trilha-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                </svg>
+                <span>música</span>
+            </div>
+            <div class="trilha-line"></div>
+            <div class="trilha-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                </svg>
+                <span>esboço</span>
+            </div>
+            <div class="trilha-line"></div>
+            <div class="trilha-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8M12 17v4"/>
+                </svg>
+                <span>digital</span>
+            </div>
+            <div class="trilha-line"></div>
+            <div class="trilha-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <circle cx="13.5" cy="6.5" r="2.5"/>
+                    <circle cx="17.5" cy="10.5" r="2.5"/>
+                    <circle cx="8.5" cy="7.5" r="2.5"/>
+                    <circle cx="6.5" cy="12.5" r="2.5"/>
+                    <path d="M12 2a10 10 0 0 0 0 20 1.5 1.5 0 0 0 0-3 4 4 0 0 1 0-8h2a6 6 0 0 0 6-6c0-1.5-1-2-3-2H12z"/>
+                </svg>
+                <span>finalização</span>
+            </div>
+        </div>
+
+        <!-- Vídeo timelapse -->
+        <div class="processo-video reveal">
+            <!--
+                INSERIR_TIMELAPSE: substitua o arquivo abaixo pelo timelapse real.
+                Formato recomendado: .mp4 ou .webm (10x mais leve que .gif).
+            -->
+            <video autoplay muted loop playsinline poster="assets/img/process/timelapse-poster.jpg">
+                <source src="assets/img/process/timelapse.mp4" type="video/mp4">
+                <source src="assets/img/process/timelapse.webm" type="video/webm">
+                Seu navegador não suporta o vídeo HTML5.
+            </video>
+            <p class="video-caption">Estudo Senku, 2024</p>
+        </div>
+
+        <blockquote class="processo-citacao reveal">
+            <p>"Comigo, sempre tem uma boa playlist rolando."</p>
+            <cite>— Fefeh</cite>
+        </blockquote>
+
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 4 — PORTFÓLIO
+     ================================================================ -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+
+        <div class="reveal">
+            <span class="section-label">// portfólio</span>
+            <h2 class="section-title">TRABALHOS</h2>
+        </div>
+
+        <!-- Filtro por categoria -->
+        <div class="portfolio-filtros reveal" role="tablist" aria-label="Filtrar trabalhos por categoria">
+            <button class="filter-pill active" data-filter="todos" role="tab" aria-selected="true">todos</button>
+            <button class="filter-pill" data-filter="ilustracao" role="tab" aria-selected="false">ilustração</button>
+            <button class="filter-pill" data-filter="animacao" role="tab" aria-selected="false">animação</button>
+            <button class="filter-pill" data-filter="3d" role="tab" aria-selected="false">3D</button>
+            <button class="filter-pill" data-filter="pintura" role="tab" aria-selected="false">pintura</button>
+            <button class="filter-pill" data-filter="social-media" role="tab" aria-selected="false">social media</button>
+            <button class="filter-pill" data-filter="design-grafico" role="tab" aria-selected="false">design gráfico</button>
+        </div>
+
+        <!-- ============================================================
+             🔵 BLOCO DE TRABALHOS DO PORTFÓLIO
+             ============================================================
+             Para adicionar um novo trabalho:
+             1) Crie a pasta assets/img/works/work-XX/ com thumb.jpg (e extras opcionais)
+             2) Copie um dos 3 templates abaixo (full / minimal / mix)
+             3) Cole logo após o último <article> e ajuste os campos
+             4) data-category deve bater com um dos filtros acima
+             ============================================================ -->
+        <div class="portfolio-grid" id="portfolioGrid">
+
+            <!-- ─────────────────────────────────────────────────────
+                 TEMPLATE A — FULL (todos os campos preenchidos)
+                 ───────────────────────────────────────────────────── -->
+            <article class="work" data-category="ilustracao" data-tags="anime,retrato,monocromático">
+                <button class="work-trigger" type="button"
+                        data-title="Retrato Senku — Dr. Stone"
+                        data-category-label="Ilustração"
+                        data-year="2024"
+                        data-description="Retrato monocromático em estilo mangá, com hatching denso e screentone sutil."
+                        data-tools="Procreate, Photoshop"
+                        data-images='["assets/img/works/work-01/thumb.jpg","assets/img/works/work-01/extra-01.jpg","assets/img/works/work-01/extra-02.jpg"]'>
+                    <img src="assets/img/works/work-01/thumb.jpg" alt="INSERIR_DESCRICAO_DA_IMAGEM" loading="lazy" onerror="this.parentElement.classList.add('placeholder')">
+                    <div class="work-overlay">
+                        <h3>Retrato Senku</h3>
+                        <span>Ilustração · 2024</span>
+                    </div>
+                </button>
+            </article>
+
+            <!-- ─────────────────────────────────────────────────────
+                 TEMPLATE B — MINIMAL (apenas obrigatórios)
+                 ───────────────────────────────────────────────────── -->
+            <article class="work" data-category="3d">
+                <button class="work-trigger" type="button"
+                        data-title="Estudo 3D — Capacete"
+                        data-category-label="3D"
+                        data-images='["assets/img/works/work-02/thumb.jpg"]'>
+                    <img src="assets/img/works/work-02/thumb.jpg" alt="INSERIR_DESCRICAO_DA_IMAGEM" loading="lazy" onerror="this.parentElement.classList.add('placeholder')">
+                    <div class="work-overlay">
+                        <h3>Estudo 3D — Capacete</h3>
+                        <span>3D</span>
+                    </div>
+                </button>
+            </article>
+
+            <!-- ─────────────────────────────────────────────────────
+                 TEMPLATE C — MIX (alguns opcionais)
+                 ───────────────────────────────────────────────────── -->
+            <article class="work" data-category="social-media" data-tags="instagram,template">
+                <button class="work-trigger" type="button"
+                        data-title="Feed pack — Coletivo XYZ"
+                        data-category-label="Social Media"
+                        data-year="2025"
+                        data-tools="Photoshop, Illustrator"
+                        data-images='["assets/img/works/work-03/thumb.jpg","assets/img/works/work-03/extra-01.jpg"]'>
+                    <img src="assets/img/works/work-03/thumb.jpg" alt="INSERIR_DESCRICAO_DA_IMAGEM" loading="lazy" onerror="this.parentElement.classList.add('placeholder')">
+                    <div class="work-overlay">
+                        <h3>Feed pack — Coletivo XYZ</h3>
+                        <span>Social Media · 2025</span>
+                    </div>
+                </button>
+            </article>
+
+            <!-- 🔵 FIM DO BLOCO DE TRABALHOS — adicione novos <article> acima desta linha -->
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 5 — SERVIÇOS
+     ================================================================ -->
+<section class="servicos" id="servicos">
+    <div class="container">
+
+        <div class="reveal">
+            <span class="section-label">// serviços</span>
+            <h2 class="section-title">O QUE EU OFEREÇO</h2>
+        </div>
+
+        <div class="servicos-grid">
+
+            <!-- CARD 1 — ILUSTRAÇÃO -->
+            <div class="servico-card reveal">
+                <svg class="servico-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="6" y="6" width="36" height="28" rx="3"/>
+                    <path d="M6 30l9-8 6 5 7-7 14 11"/>
+                    <path d="M30 18l8-8 4 4-8 8z"/>
+                </svg>
+                <h3 class="servico-titulo">ILUSTRAÇÃO</h3>
+                <p class="servico-desc">Ilustrações sob medida com identidade monocromática e referências da cultura pop. De personagens originais a fanarts autorizadas.</p>
+                <ul class="servico-bullets">
+                    <li>Personagens originais</li>
+                    <li>Fanarts / retratos</li>
+                    <li>Capas e covers</li>
+                    <li>Estudos de estilo</li>
+                </ul>
+                <a href="https://wa.me/INSERIR_WHATSAPP?text=Ol%C3%A1%20Fefeh!%20Tenho%20interesse%20em%20ilustra%C3%A7%C3%A3o."
+                   class="btn btn-outline"
+                   target="_blank"
+                   rel="noopener">solicitar orçamento</a>
+            </div>
+
+            <!-- CARD 2 — SOCIAL MEDIA -->
+            <div class="servico-card reveal">
+                <svg class="servico-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="14" y="4" width="20" height="40" rx="3"/>
+                    <circle cx="24" cy="38" r="1.5" fill="currentColor"/>
+                    <path d="M24 14c-3-3-8 0-4 4l4 4 4-4c4-4-1-7-4-4z"/>
+                </svg>
+                <h3 class="servico-titulo">SOCIAL MEDIA</h3>
+                <p class="servico-desc">Posts, capas, destaques e templates pensados para a sua marca brilhar no feed.</p>
+                <ul class="servico-bullets">
+                    <li>Posts para Instagram</li>
+                    <li>Capas de destaque</li>
+                    <li>Templates editáveis</li>
+                    <li>Identidade de feed</li>
+                </ul>
+                <a href="https://wa.me/INSERIR_WHATSAPP?text=Ol%C3%A1%20Fefeh!%20Tenho%20interesse%20em%20social%20media."
+                   class="btn btn-outline"
+                   target="_blank"
+                   rel="noopener">solicitar orçamento</a>
+            </div>
+
+            <!-- CARD 3 — DESIGN GRÁFICO -->
+            <div class="servico-card reveal">
+                <svg class="servico-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <path d="M8 42L24 6l16 36z"/>
+                    <path d="M14 30h20"/>
+                    <path d="M8 42h32"/>
+                </svg>
+                <h3 class="servico-titulo">DESIGN GRÁFICO</h3>
+                <p class="servico-desc">Materiais gráficos do impresso ao digital, sempre com olhar de artista e técnica de designer.</p>
+                <ul class="servico-bullets">
+                    <li>Logos e identidade visual</li>
+                    <li>Cartazes / flyers</li>
+                    <li>Diagramação</li>
+                    <li>Camisetas / merch</li>
+                </ul>
+                <a href="https://wa.me/INSERIR_WHATSAPP?text=Ol%C3%A1%20Fefeh!%20Tenho%20interesse%20em%20design%20gr%C3%A1fico."
+                   class="btn btn-outline"
+                   target="_blank"
+                   rel="noopener">solicitar orçamento</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 6 — DEPOIMENTOS
+     ================================================================ -->
+<section class="depoimentos" id="depoimentos">
+    <div class="container">
+
+        <div class="reveal">
+            <span class="section-label">// depoimentos</span>
+            <h2 class="section-title">O QUE DIZEM</h2>
+        </div>
+
+        <!-- ============================================================
+             🟡 BLOCO DE DEPOIMENTOS
+             ============================================================
+             Para adicionar um novo depoimento:
+             1) Copie um <li class="testimonial">...</li> abaixo
+             2) Cole logo após o último
+             3) Edite a mensagem, nome, e @ (opcional)
+             ============================================================ -->
+        <div class="carousel reveal" id="testimonialsCarousel" aria-roledescription="carrossel">
+            <button class="carousel-arrow carousel-prev" aria-label="Depoimento anterior">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+
+            <ul class="carousel-track" id="testimonialsTrack">
+
+                <li class="testimonial">
+                    <div class="balao">
+                        <p>"A Fefeh capturou exatamente a vibe que eu queria — traço autoral, entrega rápida e atenção aos detalhes do universo geek. Trabalhar com ela é fluido."</p>
+                    </div>
+                    <div class="testimonial-autor">
+                        <strong>Lucas M.</strong>
+                        <span class="autor-handle">@lucas.geek</span>
+                    </div>
+                </li>
+
+                <li class="testimonial">
+                    <div class="balao">
+                        <p>"Encomendei uma capa para meu canal e o resultado superou expectativas. Comunicação clara do briefing à entrega final."</p>
+                    </div>
+                    <div class="testimonial-autor">
+                        <strong>Marina R.</strong>
+                    </div>
+                </li>
+
+                <li class="testimonial">
+                    <div class="balao">
+                        <p>"Estética única, processo transparente e domínio técnico em ilustração e 3D. Recomendo de olhos fechados."</p>
+                    </div>
+                    <div class="testimonial-autor">
+                        <strong>Diego A.</strong>
+                        <span class="autor-handle">@diego.studio</span>
+                    </div>
+                </li>
+
+                <!-- 🟡 FIM DO BLOCO DE DEPOIMENTOS — adicione novos <li> acima desta linha -->
+            </ul>
+
+            <button class="carousel-arrow carousel-next" aria-label="Próximo depoimento">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <path d="M9 6l6 6-6 6"/>
+                </svg>
+            </button>
+
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegar depoimentos"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 7 — FAQ
+     ================================================================ -->
+<section class="faq" id="faq">
+    <div class="container faq-inner">
+
+        <div class="reveal">
+            <span class="section-label">// faq</span>
+            <h2 class="section-title">PERGUNTAS FREQUENTES</h2>
+        </div>
+
+        <!-- ============================================================
+             🟢 BLOCO DO FAQ
+             ============================================================
+             Para adicionar uma nova pergunta:
+             1) Copie um <details class="faq-item">...</details> abaixo
+             2) Cole logo após o último
+             3) Edite a pergunta (<summary>) e a resposta (<div>)
+             ============================================================ -->
+        <div class="faq-list reveal">
+
+            <details class="faq-item">
+                <summary>
+                    <span>Quais são os prazos médios de entrega?</span>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Depende do escopo. Em geral, uma ilustração simples leva de 3 a 7 dias úteis; projetos maiores (animação, identidade visual) podem levar de 2 a 4 semanas. O prazo exato é definido junto no orçamento.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    <span>Em quais formatos os arquivos finais são entregues?</span>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Entrego em alta resolução: PNG/JPG para web, PDF para impressão, e arquivos editáveis (PSD, AI, etc.) sob acordo prévio. Para animações: MP4, GIF ou sequência PNG.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    <span>Como funciona o processo de revisão?</span>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Cada projeto inclui até <strong>2 rodadas de revisão</strong> dentro do escopo combinado. Revisões adicionais são alinhadas previamente.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    <span>Você aceita comissões de fanart?</span>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Sim! Adoro trabalhar com universos pop. Para uso pessoal sem fins comerciais sem problemas; para uso comercial verifico licenças junto com você.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>
+                    <span>Quais formas de pagamento aceita?</span>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </summary>
+                <div class="faq-answer">
+                    <p>Pix, transferência bancária e PayPal (para clientes internacionais). Geralmente trabalho com <strong>50% para iniciar + 50% na entrega</strong>, mas adapto conforme o projeto.</p>
+                </div>
+            </details>
+
+            <!-- 🟢 FIM DO BLOCO DO FAQ — adicione novas perguntas acima desta linha -->
+        </div>
+
+    </div>
+</section>
+
+<!-- ================================================================
+     SEÇÃO 8 — CONTATO
+     ================================================================ -->
+<section class="contato" id="contato">
+    <div class="container contato-inner">
+
+        <div class="reveal">
+            <span class="section-label">// contato</span>
+            <h2 class="contato-title">VAMOS CRIAR ALGO JUNTOS?</h2>
+            <p class="contato-sub">me chama no WhatsApp e bora conversar sobre o seu projeto.</p>
+        </div>
+
+        <a href="https://wa.me/INSERIR_WHATSAPP?text=Ol%C3%A1%20Fefeh!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+           class="btn btn-primary btn-huge reveal"
+           target="_blank"
+           rel="noopener">
+            SOLICITE UM ORÇAMENTO
+        </a>
+
+        <div class="contato-divider reveal">
+            <span>ou se preferir</span>
+        </div>
+
+        <div class="contato-canais reveal">
+            <a href="https://wa.me/INSERIR_WHATSAPP" class="canal" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <path d="M3 21l2-6a9 9 0 1 1 4 4l-6 2z"/>
+                    <path d="M8 11c0 4 3 7 7 7l2-2-3-2-1 1c-1 0-3-2-3-3l1-1-2-3-2 2z" fill="currentColor"/>
+                </svg>
+                <span class="canal-nome">WhatsApp</span>
+                <span class="canal-info">INSERIR_WHATSAPP</span>
+            </a>
+
+            <a href="https://instagram.com/fefeh_art_" class="canal" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+                <span class="canal-nome">Instagram</span>
+                <span class="canal-info">@fefeh_art_</span>
+            </a>
+
+            <a href="mailto:contato@fefeh.com.br" class="canal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="M3 7l9 6 9-6"/>
+                </svg>
+                <span class="canal-nome">E-mail</span>
+                <span class="canal-info">contato@fefeh.com.br</span>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="site-footer" id="siteFooter">
+    <div class="container footer-inner">
+
+        <div class="footer-socials">
+            <a href="INSERIR_BEHANCE" target="_blank" rel="noopener" aria-label="Behance" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <path d="M2 6h7a3 3 0 0 1 0 6H2zM2 12h8a3 3 0 0 1 0 6H2zM14 9h8M14 14h8a4 4 0 0 0-8 0c0 3 8 3 8 0"/>
+                </svg>
+                <span class="social-label">Behance</span>
+            </a>
+
+            <a href="INSERIR_ARTSTATION" target="_blank" rel="noopener" aria-label="ArtStation" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <path d="M2 18l3-5h14l3 5zM6 13l6-10 6 10M15 18l1 3h3"/>
+                </svg>
+                <span class="social-label">ArtStation</span>
+            </a>
+
+            <a href="INSERIR_LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <circle cx="8" cy="9" r="1" fill="currentColor"/>
+                    <path d="M8 12v6M12 18v-4a2 2 0 1 1 4 0v4M12 12v6"/>
+                </svg>
+                <span class="social-label">LinkedIn</span>
+            </a>
+
+            <a href="https://instagram.com/fefeh_art_" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+                <span class="social-label">Instagram</span>
+            </a>
+        </div>
+
+        <div class="footer-copy">
+            <p>© <span id="footerYear">2026</span> Fernanda Viana — Fefeh. Todos os trabalhos são autorais.</p>
+            <p class="footer-credit">
+                feito com energético, trilha sonora de anime e com
+                <span class="heart" aria-hidden="true">♥</span>
+                <span class="visually-hidden">amor</span>
+                por
+                <a href="https://incisi.dev.br/" target="_blank" rel="noopener">Incisi</a>
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- ================================================================
+     LIGHTBOX (modal de visualização de trabalhos)
+     ================================================================ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualização de trabalho">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M6 6l12 12M6 18L18 6"/>
+        </svg>
+    </button>
+
+    <button class="lightbox-arrow lightbox-prev" aria-label="Imagem anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"/>
+        </svg>
+    </button>
+
+    <button class="lightbox-arrow lightbox-next" aria-label="Próxima imagem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M9 6l6 6-6 6"/>
+        </svg>
+    </button>
+
+    <div class="lightbox-inner">
+        <div class="lightbox-image-wrap">
+            <img src="" alt="" id="lightboxImage">
+            <span class="lightbox-counter" id="lightboxCounter"></span>
+        </div>
+
+        <div class="lightbox-info">
+            <h3 id="lightboxTitle"></h3>
+            <p class="lightbox-meta"><span id="lightboxCategory"></span><span id="lightboxYear"></span></p>
+            <p id="lightboxDescription" class="lightbox-desc"></p>
+            <p id="lightboxTools" class="lightbox-tools"></p>
+            <ul id="lightboxTags" class="lightbox-tags"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================
+     JAVASCRIPT
+     ================================================================ -->
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
